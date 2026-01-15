@@ -104,7 +104,7 @@ class Php implements TemplateHandlerInterface
         $this->content = $content;
 
         extract($data, EXTR_OVERWRITE);
-        eval('?>' . $this->content);
+        echo $this->content;
     }
 
     protected function getViewPath(string $app): string
