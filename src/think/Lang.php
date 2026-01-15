@@ -131,6 +131,10 @@ class Lang
             return;
         }
 
+        if (preg_match('/[^a-zA-Z0-9\-_]/', $langset)) {
+            return;
+        }
+
         $this->setLangSet($langset);
 
         // 加载系统语言包
